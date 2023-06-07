@@ -27,12 +27,12 @@ const UserSchema = new mongoose.Schema({
     }],
     createdAt: {
         type: Date,
-        default: ()=> new Date.now(),
+        default: Date.now(),
         immutable: true,
     },
     UpdatedAt: {
         type: Date,
-        default: ()=>  new Date.now()
+        default: ()=>  Date.now()
     }
 })
 
