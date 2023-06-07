@@ -6,6 +6,6 @@ exec(`node seeders/${filename}`, (error, stdout, stderr) => {
   if (error) {
     console.error('Error executing script:', error);
   } else {
-    console.log('Script executed successfully');
+    console.log(`${filename} executed successfully`);
   }
 });

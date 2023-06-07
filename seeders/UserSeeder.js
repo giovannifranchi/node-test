@@ -19,10 +19,17 @@ const newUsers = [
     email: "franco@test.it",
     role: "guest",
   },
+  {
+    name: "giovanni",
+    lastname: "franchi",
+    email: "giovanni@test.it",
+    role: "admin",
+  },
+
 ];
 
-function run() {
-  newUsers.forEach(async (user) => {
+async function run() {
+  for (const user of newUsers) {
     const newUser = new User({
       name: user.name,
       lastName: user.lastname,
@@ -30,7 +37,14 @@ function run() {
       role: user.role,
     });
     await newUser.save();
-  });
+  }
 }
 
-run();
+run()
+.then(() => {
+    process.exit(0);
+})
+.catch((error) => {
+    console.error("Seeding failed:", error);
+    process.exit(1);
+});
