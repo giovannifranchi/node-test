@@ -11,7 +11,7 @@ app.listen(3000, async () => {
 
 app.get("/users", async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find().populate('projects', 'project', 'Project');
     res.status(200).json(users);
   } catch (err) {
     console.log(err);
