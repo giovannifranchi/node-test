@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema({
         enum: ['admin', 'user', 'guest'],
         required: [true, 'role must be provided']
     },
+    projects: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Project',
+    }]
 })
 
 
