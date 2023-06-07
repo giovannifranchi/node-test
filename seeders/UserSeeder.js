@@ -4,6 +4,9 @@ const {faker} = require('@faker-js/faker');
 
 
 async function run(){
+
+  await User.deleteMany();
+
   const projects = await Project.find();
 
   for(let i = 0 ; i <= 50; i++){

@@ -7,6 +7,8 @@ const faker = require('@faker-js/faker');
 
 async function run(){
 
+    await Project.deleteMany();
+
     for( let i = 0; i <= 30; i++){
         const newProject = new Project({
             title: faker.fakerEN.commerce.product(),
