@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const Project = require('../models/Project');
 const {faker} = require('@faker-js/faker');
-const Random = require('../helpers/Random');
+
 
 async function run(){
   const projects = await Project.find();
