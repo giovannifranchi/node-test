@@ -24,7 +24,16 @@ const UserSchema = new mongoose.Schema({
     projects: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Project',
-    }]
+    }],
+    createdAt: {
+        type: Date,
+        default: ()=> new Date.now(),
+        immutable: true,
+    },
+    UpdatedAt: {
+        type: Date,
+        default: ()=>  new Date.now()
+    }
 })
 
 

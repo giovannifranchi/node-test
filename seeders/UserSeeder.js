@@ -2,33 +2,6 @@ const User = require("../models/User");
 const Project = require('../models/Project');
 const Random = require('../helpers/Random');
 
-const newUsers = [
-  {
-    name: "jacopo",
-    lastname: "marcello",
-    email: "jacopo@test.com",
-    role: "user",
-  },
-  {
-    name: "nicola",
-    lastname: "rossi",
-    email: "nicola@test.it",
-    role: "guest",
-  },
-  {
-    name: "franco",
-    lastname: "rossi",
-    email: "franco@test.it",
-    role: "guest",
-  },
-  {
-    name: "giovanni",
-    lastname: "franchi",
-    email: "giovanni@test.it",
-    role: "admin",
-  },
-
-];
 
 async function run() {
   const projects = await Project.find();

@@ -20,6 +20,15 @@ const ProjectSchema = mongoose.Schema({
           message: 'Image must be in JPG, PNG, or SVG format',
         },
     },
+    createdAt: {
+        type: Date,
+        default: ()=> new Date.now(),
+        immutable: true,
+    },
+    UpdatedAt: {
+        type: Date,
+        default: ()=>  new Date.now()
+    }
 })
 
 module.exports = ProjectSchema;
