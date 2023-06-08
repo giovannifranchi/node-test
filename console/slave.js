@@ -4,7 +4,13 @@ const seederGenerator = require('./slave/seederSlave');
 const slave = process.argv[2];
 const slaveName = process.argv[3];
 
-
+function slaveNameSanitizer(slaveName){
+    const seederName = `${slaveName}Seeder`;
+    const schemaName = `${slaveName}Schema`;
+    schemaGenerator(schemaName);
+    seederGenerator(seederName);
+    modelGenerator(slaveName); 
+}
 
 
 function slaveController(slave, slaveName){
@@ -18,7 +24,10 @@ function slaveController(slave, slaveName){
         case 'seeder':
             seederGenerator(slaveName);
             break;
-        default: console.log('wrong syntax used');
+        case 'resource':
+            slaveNameSanitizer(slaveName);
+            break;
+        default: console.log('wrong syntax');
     }
 }
 
