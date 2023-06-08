@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "seed": "node console/seed.js"
+    "seed": "node console/seed.js",
+    "slave": "node console/slave/schemaSlave.js"
   },
   "author": "",
   "license": "ISC",
