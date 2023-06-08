@@ -14,7 +14,6 @@ if(filename){
     }
   });
 }else {
-
   for(let seeder of massSeeder){
     exec(`node seeders/${seeder}.js`, (error, stdout, stderr) => {
       if (error) {
