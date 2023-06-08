@@ -30,4 +30,6 @@ module.exports = ${schemaName};
 }
 
 
-generateSchema(schemaName);
+// generateSchema(schemaName);
+
+module.exports = generateSchema;

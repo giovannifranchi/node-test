@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "seed": "node console/seed.js",
-    "slave": "node console/slave/schemaSlave.js"
+    "slave:": "node console/slave.js"
   },
   "author": "",
   "license": "ISC",
