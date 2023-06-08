@@ -5,7 +5,7 @@ const directory = 'seeders';
 
 function generateSeeder(seederName){
     const regex = /(?=[A-Z][a-z])/;
-    const sanitizedName = seederName.split(regex);
+    const sanitizedName = seederName.split(regex)[0];
     const template = `
     const ${sanitizedName} = require('../models/${sanitizedName}');
     const faker = require('@faker-js/faker');
